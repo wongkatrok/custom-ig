@@ -1,0 +1,133 @@
+:root {
+  --ig-bg: #ffffff;
+  --ig-fg: #0f172a;
+  --ig-subtle: #64748b;
+  --ig-border: #e2e8f0;
+  --ig-card: #f8fafc;
+  --ig-radius: 16px;
+  --ig-shadow: 0 10px 20px rgba(2, 6, 23, 0.08);
+  --ig-ring: conic-gradient(from 180deg at 50% 50%, #f59e0b, #ef4444, #8b5cf6, #10b981, #f59e0b);
+}
+
+.ig-wrap {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial;
+  color: var(--ig-fg);
+  background: var(--ig-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.ig-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+  background: var(--ig-card);
+  border: 1px solid var(--ig-border);
+  border-radius: var(--ig-radius);
+  padding: 16px;
+  box-shadow: var(--ig-shadow);
+  max-width: 680px;
+}
+
+.ig-avatar {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  border-radius: 9999px;
+  padding: 3px;
+  background: var(--ig-ring);
+}
+.ig-avatar > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+  background: #cbd5e1;
+}
+
+.ig-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.ig-name {
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+.ig-username {
+  font-size: .95rem;
+  color: var(--ig-subtle);
+}
+
+.ig-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+.ig-btn {
+  appearance: none;
+  border: 1px solid var(--ig-border);
+  background: var(--ig-bg);
+  color: var(--ig-fg);
+  padding: 8px 12px;
+  border-radius: 9999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ig-btn.primary {
+  background: var(--ig-fg);
+  color: var(--ig-bg);
+  border-color: var(--ig-fg);
+}
+
+.ig-bio {
+  margin-top: 6px;
+  color: var(--ig-fg);
+  font-size: .98rem;
+  line-height: 1.45;
+  white-space: pre-line;
+}
+
+.ig-badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.ig-badge {
+  font-size: .75rem;
+  border: 1px solid var(--ig-border);
+  padding: 4px 8px;
+  border-radius: 9999px;
+  color: var(--ig-subtle);
+}
+
+.ig-footer {
+  margin-top: 12px;
+}
+.ig-link {
+  font-size: .9rem;
+  text-decoration: none;
+  color: var(--ig-fg);
+  border-bottom: 1px dashed var(--ig-border);
+}
+
+@media (max-width:520px) {
+  .ig-card {
+    grid-template-columns: 1fr;
+  }
+  .ig-avatar {
+    width: 76px;
+    height: 76px;
+  }
+  .ig-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
